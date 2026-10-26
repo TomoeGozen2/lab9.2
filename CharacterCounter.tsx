@@ -29,7 +29,7 @@ import TextInput from '../TextInput/TextInput';
 export default function CharacterCounter() {
   const [text, setText] = useState("");
     let characters = document.querySelector("textarea");
-    function onTextChange(){
+    function onTextChange(text:string){
         
         
         setText(text);
