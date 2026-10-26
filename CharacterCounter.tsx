@@ -5,42 +5,43 @@ import { useState } from "react";
 import StatsDisplay from '../StatsDisplay/StatsDisplay';
 import TextInput from '../TextInput/TextInput';
  
-export const CharacterCounter: React.FC<CharacterCounterProps> = ({
-  minWords = 25, 
-  maxWords, 
-  targetReadingTime,
-}) =>   {  
-    const [text, setText] = useState("");{
+// export const CharacterCounter: React.FC<CharacterCounterProps> = ({
+//   minWords = 25, 
+//   maxWords, 
+//   targetReadingTime,
+// }) =>   {  
+//     const [text, setText] = useState("");
 
-    }
-    function onTextChange(text:string){
-        setText(text);
-        console.log(text)
+    
+//     function onTextChange(text:string){
+//         setText(text);
+//         console.log(text)
+//     }
+//   return (
+//     <div className="w-full">
+      
+      
+//       <TextInput onTextChange = {onTextChange}/>
+//     </div>
+//   );
+// };
+
+export default function CharacterCounter() {
+  const [text, setText] = useState("");
+    let characters = document.querySelector("textarea");
+    function onTextChange(){
+        
+        
+        
+
     }
   return (
     <div className="w-full">
       
       
       <TextInput onTextChange = {onTextChange}/>
+      <div>Character counter: {characters?.value.length}</div>
     </div>
   );
-};
 
-// export default function CharacterCounter() {
-//   const [text, setText] = useState("");
-
-//     function onTextChange(){
-        
-
-
-
-//     }
-//   return (
-//     <div className="w-full">
-      
-//       <StatsDisplay />
-//       <TextInput onTextChange = {onTextChange}/>
-//     </div>
-//   );
-
-// }
+}
