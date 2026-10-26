@@ -32,7 +32,7 @@ export default function CharacterCounter() {
     function onTextChange(){
         
         
-        
+        setText(text);
 
     }
   return (
@@ -40,7 +40,7 @@ export default function CharacterCounter() {
       
       
       <TextInput onTextChange = {onTextChange}/>
-      <div>Character counter: {characters?.value.length}</div>
+      <div>Character counter: {text.length}</div>
     </div>
   );
 
