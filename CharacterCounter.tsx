@@ -28,7 +28,7 @@ import TextInput from '../TextInput/TextInput';
 
 export default function CharacterCounter() {
   const [text, setText] = useState("");
-  const [wordCount, setCount] = useState(text.split(' ').length - 1);
+  const [wordCount, setCount] = useState(0);
   let characters = document.querySelector("textarea");
   function onTextChange(text: string) {
 
@@ -40,7 +40,11 @@ export default function CharacterCounter() {
     
       // Use the setter function to update the state
       // Pass the new value directly
-      setCount(wordCount);
+      for(let i = 0; i<= text.length; i++){
+        if(text.includes(" ")){
+          setCount(wordCount + 1)
+        }
+      }
       // Note: Avoid count++ or ++count - modify state via the setter!
     
 
